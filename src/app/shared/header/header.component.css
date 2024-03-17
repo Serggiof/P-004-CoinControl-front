@@ -1,0 +1,13 @@
+/* Estilo para la imagen del encabezado */
+header .container img {
+    max-width: 40%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción original */
+    margin: 0 auto; /* Centrar la imagen horizontalmente dentro del contenedor */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-top: -20px;
+}
+
+header{
+    background-color: #031f33;
+   
+}

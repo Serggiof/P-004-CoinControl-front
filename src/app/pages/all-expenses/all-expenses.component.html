@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="table-container">
+    <table class="category-table">
+      <ng-container *ngFor="let category of categories">
+        <!-- Verificar si la categoria tiene un gasto asociado -->
+        <ng-container *ngIf="categoryHasExpenses(category.id)">
+          <tr>
+            <td colspan="2">
+              <button (click)="toggleCategory(category.id)" class="category-name">
+                <span class="category-name-text">{{ category.name }}</span>
+                <span class="category-total">${{ categoryTotalExpenses[category.name] || 0 }}</span>
+              </button>
+            </td>
+            
+          </tr>
+          <tr *ngIf="expandedCategories[category.id]">
+            <td colspan="2">
+              <table class="expenses-table">
+                <tr>
+                  <th>Descripción</th>
+                  <th>Precio</th>
+                  <th>Fecha</th>
+                  <th></th>
+                </tr>
+                <tr *ngFor="let expense of categoryExpensesMap[category.id]" class="expense-row">
+                  <td>{{ expense.description }}</td>
+                  <td>${{ expense.amount }}</td>
+                  <td>{{ expense.date }}</td>
+                  <td><button (click)="deleteExpense(expense.id)" class="delete-button">Eliminar</button></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+body {
+  background-color: #031f33;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #031f33;
+
+}
+
+/* Estilos para el formulario de registro */
+.registration-form {
+  max-width: 400px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.registration-form h2 {
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.registration-form .form-group label {
+  color: #000000;
+}
+
+.registration-form .form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el botón de registro */
+.registration-form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.btn-primary {
+  background-color: #86ff2e;
+  border-color: #000000;
+}
+
+h2{
+  color: #000000;
+  text-align: center;
+}
